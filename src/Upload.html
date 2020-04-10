@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>Upload</title>
+    </head>
+    <link href="./css/Upload.css" rel="stylesheet" type="text/css">
+
+    <div style="position:relative" class="ttop">
+        <body>
+            <div class="top">
+                <center> 
+                    <ul>
+                    <img src="../img/cat.jpg" width="60" height="60" style="position:absolute; left:0px; top:0px; ">
+                    <li><a href="./Home.html"><b>Home</b></a></li>
+                    <li><a href="./Browser.html"><b>Browse</b></a></li>
+                    <li><a href="./Search.html"><b>Search</b></a></li>
+                
+                    <li style="position:absolute; right:0px">
+                        <a href="#"><b>My Account</b></a>
+                        <ul>
+                            <li><a href="./Upload.html">Upload</a></li>
+                            <li><a href="./MyPhotos.html">My Photos</a></li>
+                            <li><a href="./Favor.html">My Favorite</a></li>
+                            <li><a href="./Login.html">Log in</a></li>
+                        </ul>
+                    </li>        
+                    </ul>
+                    </center>      
+            </div>
+        </body>
+    </div>
+
+    <div class="content" style="position: relative;">
+        <img id="preview" style="position: absolute; left:40%; height:300px; top:50px">
+        <form id="form" method="POST" enctype="multipart/form-data" action="upload" onsubmit="return check();">
+            <input type="file" accept="image/*" name="file" id="file" style="position: absolute; left:45%; width:200px; top:400px"/>  
+        </form>
+
+        <p style="position: absolute; left:18%; top:450px">Title</p>
+        <input type="text" name="title" style="position: absolute; left:24%; width:60%; top:465px">
+        <p style="position: absolute; left:18%; top:500px">Country</p>
+        <input type="text" name="Country" style="position: absolute; left:24%; width:60%; top:515px">
+        <p style="position: absolute; left:18%; top:550px">City</p>
+        <input type="text" name="City" style="position: absolute; left:24%; width:60%; top:565px">
+        <p style="position: absolute; left:18%; top:600px">Description</p>
+        <textarea name="description" style="position: absolute; left:24%; top: 615px; width:60%; height: 120px;"></textarea>
+        <a href="./MyPhotos.html"><button onclick="javascript:display_alert();" style="position: absolute; left:47%; top:800px; width:120px; height:30px">submit</button></div></a>
+    </div>
+       
+    <script>
+        function display_alert(){
+            alert("I am an alert box!!")
+        }
+    </script>
+            
+    <script>
+        var fileDom = document.getElementById("file");
+        var previewDom = document.getElementById("preview");
+        fileDom.addEventListener("change", e=>{
+            var file = fileDom.files[0];
+            // check if input contains a valid image file
+            if (!file || file.type.indexOf("image/") < 0) {
+                fileDom.value = "";
+                previewDom.src = "";
+                return;
+            }
+                
+            // use FileReader to load image and show preview of the image
+            var fileReader = new FileReader();
+            fileReader.onload = e=>{
+                previewDom.src = e.target.result;
+            };
+            fileReader.readAsDataURL(file);
+        });
+            
+        var formDom = document.getElementById("form");
+        function check() {
+            var file = fileDom.files[0];
+            // check if input contains a valid image file
+            if (!file || file.type.indexOf("image/") < 0) {
+                return false;
+            }
+            return true;
+        }
+        </script>
+
+    <div class="top" style="position: relative; margin-bottom: 0%">
+        <p align="center">
+            <br>
+            Contact with us: jnlin16@fudan.edu.cn
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            All Rights Reversed
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Copyright 2019-2021 Web Fundamental
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            CatHub
+        </p>
+    </div>
+</html>

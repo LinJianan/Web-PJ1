@@ -1,0 +1,205 @@
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <script language="javascript">
+        document.location = "./src/Login.html";
+    </script>
+    <div style="position:relative" class="ttop">
+   
+       <link href="./src/css/index.css" rel="stylesheet" type="text/css">
+        <body>
+            <div class="top">
+                   <center> 
+                    <ul>
+                    <img src="./img/cat.jpg" width="60" height="60" style="position:absolute; left:0px; top:0px; ">
+                    <li><a href="#"><b><u>Home</u></b></a></li>
+                    <li><a href="./src/Browser.html"><b>Browse</b></a></li>
+                    <li><a href="./src/Search.html"><b>Search</b></a></li>
+                   
+                    <li style="position:absolute; right:0px">
+                        <a href="#"><b>My Account</b></a>
+                        <ul>
+                            <li><a href="./src/Upload.html">Upload</a></li>
+                            <li><a href="./src/MyPhotos.html">My Photos</a></li>
+                            <li><a href="./src/Favor.html">My Favorite</a></li>
+                            <li><a href="./src/Login.html">Log in</a></li>
+                        </ul>
+                    </li>        
+                      </ul>
+                    </center>      
+            </div>
+        </body>
+    
+    </div>
+
+    <div style="position:relative">
+        <img src="./img/0.jpg" width="100%" style="position:relative">
+    </div>
+
+    <div style="position:relative">
+        <div class="firstpart">
+            <ul item-width="100%">
+            <li style="display:block" id="1"><a href="./src/Details.html"><img src="./img/1.jpg" width="100%"></a></li>
+            <li style="display:none" id="7"><a href="./src/Details.html"><img src="./img/7.jpg" width="100%"></a></li>
+            </ul>
+            <div>
+                <p><b><font size="13">&nbsp;&nbsp;Title</font></b></p>
+                <p><font size="5">&nbsp;&nbsp;&nbsp;&nbsp;This is a picutre about......</font></p>
+            </div>
+        </div>
+        <div class="firstpart">
+            <ul item-width="100%">
+                <li style="display:block" id="2"><a href="./src/Details.html"><img src="./img/2.jpg" width="100%"></a></li>
+                <li style="display:none" id="8"><a href="./src/Details.html"><img src="./img/8.jpg" width="100%"></a></li>
+            </ul>
+            <div>
+                <p><b><font size="13">&nbsp;&nbsp;Title</font></b></p>
+                <p><font size="5">&nbsp;&nbsp;&nbsp;&nbsp;This is a picutre about......</font></p>
+            </div>
+        </div>
+        <div class="firstpart">
+            <ul item-width="100%">
+                <li style="display:block" id="3"><a href="./src/Details.html"><img src="./img/3.jpg" width="100%"></a></li>
+                <li style="display:none" id="9"><a href="./src/Details.html"><img src="./img/9.jpg" width="100%"></a></li>
+            </ul>
+            <div>
+                <p><b><font size="13">&nbsp;&nbsp;Title</font></b></p>
+                <p><font size="5">&nbsp;&nbsp;&nbsp;&nbsp;This is a picutre about......</font></p>
+            </div>
+        </div>
+    </div>
+
+    <div style="position:relative">
+        <div class="firstpart">
+            <ul item-width="100%">
+                <li style="display:block" id="4"><a href="./src/Details.html"><img src="./img/4.jpg" width="100%"></a></li>
+                <li style="display:none" id="10"><a href="./src/Details.html"><img src="./img/10.jpg" width="100%"></a></li>
+            </ul>
+            <div>
+                <p><b><font size="13">&nbsp;&nbsp;Title</font></b></p>
+                <p><font size="5">&nbsp;&nbsp;&nbsp;&nbsp;This is a picutre about......</font></p>
+            </div>
+        </div>
+        <div class="firstpart">
+            <ul item-width="100%">
+                <li style="display:block" id="5"><a href="./src/Details.html"><img src="./img/5.jpg" width="100%"></a></li>
+                <li style="display:none" id="11"><a href="./src/Details.html"><img src="./img/11.jpg" width="100%"></a></li>
+            </ul>
+            <div>
+                <p><b><font size="13">&nbsp;&nbsp;Title</font></b></p>
+                <p><font size="5">&nbsp;&nbsp;&nbsp;&nbsp;This is a picutre about......</font></p>
+            </div>
+        </div>
+        <div class="firstpart">
+            <ul item-width="100%">
+                <li style="display:block" id="6"><a href="./src/Details.html"><img src="./img/6.jpg" width="100%"></a></li>
+                <li style="display:none" id="12"><a href="./src/Details.html"><img src="./img/12.jpg" width="100%"></a></li>
+            </ul>
+            <div>
+                <p><b><font size="13">&nbsp;&nbsp;Title</font></b></p>
+                 <p><font size="5">&nbsp;&nbsp;&nbsp;&nbsp;This is a picutre about......</font></p>
+            </div>
+        </div>
+        </div>
+
+
+    <button style="position: fixed; right: 5%; bottom: 20%; height: 40px; width: 100px;" id="btn1">></button>
+    
+    <script language="javascript">
+            var a = document.getElementById("1");
+            var b = document.getElementById("2");
+            var c = document.getElementById("3");
+            var d = document.getElementById("4");
+            var e = document.getElementById("5");
+            var f = document.getElementById("6");
+            var g = document.getElementById("7");
+            var h = document.getElementById("8");
+            var i = document.getElementById("9");
+            var j = document.getElementById("10");
+            var k = document.getElementById("11");
+            var l = document.getElementById("12");
+
+            var b1 = document.getElementById("btn1");
+            
+            var num = 0;
+
+            b1.onclick = function(){   
+                num++;
+                if (num > 1)
+                   num = 0;
+                panduan();
+            }
+            
+            function panduan(){
+                if(num == 1){
+                    a.style.display="none";
+                    b.style.display="none";
+                    c.style.display="none";
+                    d.style.display="none";
+                    e.style.display="none";
+                    f.style.display="none";
+                    g.style.display="block";
+                    h.style.display="block";
+                    i.style.display="block";
+                    j.style.display="block";
+                    k.style.display="block";
+                    l.style.display="block";
+                }
+                if(num == 0){
+                    a.style.display="block";
+                    b.style.display="block";
+                    c.style.display="block";
+                    d.style.display="block";
+                    e.style.display="block";
+                    f.style.display="block";
+                    g.style.display="none";
+                    h.style.display="none";
+                    i.style.display="none";
+                    j.style.display="none";
+                    k.style.display="none";
+                    l.style.display="none";
+                }
+            }   
+    </script>
+
+    <button style="position: fixed; right: 5%; bottom: 10%; height: 40px; width: 100px;" id="btn">^</button>
+    <script>
+        function goTop(){
+            //速度
+            var speed = 100;
+            //开启定时器
+            
+            var timer = setInterval(function(){
+                //获取滚动条的高度
+                var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                //设置滚动的高度
+                document.documentElement.scrollTop = document.body.scrollTop = (scrollTop - speed);
+                //清除定时器
+                speed += 30;
+                if(scrollTop <= 0){
+                    clearInterval(timer);
+                }
+            },30)
+        }
+
+        btn.onclick = function(){
+            
+            goTop();//调用函数
+        }
+    </script>
+
+    <div class="top" style="position: relative">
+        <p align="center">
+            <br>
+            Contact with us: jnlin16@fudan.edu.cn
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            All Rights Reversed
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Copyright 2019-2021 Web Fundamental
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            CatHub
+        </p>
+    </div>
+
+</html>
